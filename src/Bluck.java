@@ -38,12 +38,15 @@ public class Bluck {
             channels.add(c);
         }
 
-        List<String> result = new LinkedList<String>();
+        List<List<String>> result = new LinkedList<List<String>>();
         long startTime = System.nanoTime();
         for (var c: channels) {
             var res = (List<String>) c.readObject();
-            for (var item : res) {
-                System.out.println(item);
+            result.add(res);
+        }
+        for (var l: result) {
+            for (var s: l) {
+                System.out.println(s);
             }
         }
         long endTime = System.nanoTime();
