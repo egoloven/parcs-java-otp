@@ -44,12 +44,12 @@ public class Bluck {
             var res = (List<String>) c.readObject();
             result.add(res);
         }
+        long endTime = System.nanoTime();
         for (var l: result) {
             for (var s: l) {
                 System.out.println(s);
             }
         }
-        long endTime = System.nanoTime();
         System.out.println("Time taken for encryption: " + (endTime - startTime) + " nanoseconds");
         curtask.end();
     }
