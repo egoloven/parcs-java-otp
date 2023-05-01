@@ -50,7 +50,7 @@ public class Bluck {
             }
         }
         long endTime = System.nanoTime();
-        //System.out.println("Time taken for encryption: " + (endTime - startTime) + " nanoseconds");
+        System.out.println("Time taken for encryption: " + (endTime - startTime) + " nanoseconds");
         curtask.end();
     }
 
